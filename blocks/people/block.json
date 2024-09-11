@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ehd/people",
+	"title": "People",
+	"description": "A list of people with popups for Bios",
+	"style": "file:../../dist/css/people/people.css",
+	"editorStyle": "file:../../dist/css/people/editor.css",
+	"editorScript": [],
+	"script": "ehd-people-js",
+	"category": "common",
+	"icon": "groups",
+	"keywords": [
+		"",
+		"",
+		""
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "people.php"
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"alignWide": true,
+		"alignContent": false,
+		"alignText": false,
+		"anchor": true,
+		"className": true,
+		"color": {
+			"background": true,
+			"gradients": false,
+			"link": false,
+			"text": false,
+			"enableContrastChecker": false
+		},
+		"customClassName": true,
+		"defaultStylePicker": true,
+		"html": false,
+		"multiple": true,
+		"reusable": true,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": false,
+			"lineHeight": false
+		}
+	},
+	"attributes": {
+		"variable": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"example": {}
+}

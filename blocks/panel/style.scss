@@ -1,0 +1,20 @@
+@import "../../src/scss/variables";
+
+.wp-block-ehd-panel {
+  --panel-accent-color: var(--color-accent, #000);
+  --panel-padding: var(--global-padding, 1.5rem);
+
+  text-align: center;
+  border: 2px solid var(--panel-accent-color);
+  border-radius: 4px;
+
+  .panel-header {
+    padding: calc(var(--panel-padding) / 2);
+    background-color: var(--panel-accent-color);
+    color: white;
+  }
+
+  .panel-body {
+    padding: calc(var(--panel-padding) / 2);
+  }
+}

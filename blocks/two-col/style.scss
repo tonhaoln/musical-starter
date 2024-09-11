@@ -1,0 +1,11 @@
+@import "../../src/scss/variables";
+
+.wp-block-ehd-two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $wrapper-padding;
+
+  @media (min-width: $content-bp) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

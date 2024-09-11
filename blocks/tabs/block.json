@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "Tabbed Content",
+  "name": "ehd/tabs",
+  "version": "1",
+  "category": "custom-blocks",
+  "icon": "table-row-after",
+  "description": "Group of tabs.",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": true,
+    "spacing": {
+			"margin": true,
+			"padding": true
+		}
+  },
+  "attributes": {
+    "className": {
+      "type": "string",
+      "default": ""
+    },
+    "tabLabelsArray": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "textdomain": "oots-plugin",
+  "script": "file:../../dist/js/tabs.js",
+  "editorScript": "file:../../dist/js/tabs-index.js",
+  "editorStyle": "file:../../dist/css/tabs/editor.css",
+  "style": "file:../../dist/css/tabs/style.css",
+  "render": "file:./index.php"
+}

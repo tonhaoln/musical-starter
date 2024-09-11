@@ -1,0 +1,167 @@
+@import "../../src/scss/variables";
+
+
+
+.wp-block-ehd-people {
+  container-type: inline-size;
+
+  // make it a container
+  .people-row {
+    --people-gap: 1rem;
+
+    @container(min-width: 900px) {
+      --people-gap: 2rem;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--people-gap);
+
+    .person-preview {
+      a {
+        display: flex;
+        padding: var(--people-gap);
+        justify-content: center;
+        align-items: stretch;
+      }
+
+      @container(min-width: 900px) {
+        a {
+          min-height: 200px;
+
+          .person-preview-meta {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+
+      width: 100%;
+      background-color: rgba(#000, 0.7);
+      text-align: center;
+
+      box-shadow: 0 0 20px 5px rgba($accent, 0);
+      transition: box-shadow 0.3s ease,
+      background-color 0.3s ease;
+
+
+
+      @container(min-width: 600px) {
+        width: calc(50% - var(--people-gap));
+      }
+
+      @container(min-width: 900px) {
+        width: calc(33.3% - var(--people-gap));
+      }
+
+      @container(min-width: 1200px) {
+        width: calc(25% - var(--people-gap));
+      }
+
+
+      h4,
+      p {
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+        line-height: 1.2;
+      }
+
+      h4 {
+        padding-bottom: 1rem;
+        font-size: var(--wp--preset--font-size--x-large);
+
+        &:after {
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+      }
+
+      p {
+        margin-top: auto;
+        padding-top: 1rem;
+        font-size: var(--wp--preset--font-size--medium);
+        color: $fgcolor;
+      }
+
+      &:hover {
+        h4 {
+          color: $accent;
+        }
+
+        box-shadow: 0 0 20px 5px rgba($accent, 0.5);
+        background-color: rgba(#000, 1);
+      }
+    }
+  }
+
+  .people-modal {
+    display: none;
+  }
+}
+
+
+
+.fancybox__container {
+  .fancybox__content>.f-button.is-close-btn {
+    --f-button-color: #{$accent};
+    --f-button-hover-color: #{darken($accent, 15%)};
+    --f-button-width: 40px;
+    --f-button-height: 40px;
+    --f-button-svg-width: 37px;
+    --f-button-svg-height: 37px;
+  }
+
+  .people-modal {
+    max-width: Min(90%, 1200px);
+    background-color: $bgcolor;
+
+    h4,
+    p.role {
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+
+    h4 {
+      color: $accent;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+
+      font-size: var(--wp--preset--font-size--x-large);
+
+      &:after {
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    p.role {
+      font-size: var(--wp--preset--font-size--medium);
+      color: $fgcolor;
+      font-weight: 300;
+      padding-bottom: 3rem;
+
+      span {
+        &:after {
+          bottom: -1rem;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+      }
+    }
+
+    .bio {
+      text-align: center;
+
+      p {
+        color: $fgcolor;
+        font-size: var(--wp--preset--font-size--medium);
+      }
+    }
+
+  }
+}

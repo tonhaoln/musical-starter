@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "awp/custom-block",
+	"title": "AWP Custom Block",
+	"description": "Example of custom block with block.json",
+	"category": "design",
+	"textdomain": "awp",
+	"supports": {
+		"align": ["wide"]
+	},
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "wide"
+		},
+		"title" : {
+			"type": "string"
+		}
+	},
+	"editorScript": "file:../../dist/js/test-index.js"
+}

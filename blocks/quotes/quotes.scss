@@ -1,0 +1,78 @@
+.wp-block-ehd-quotes {
+  .container {
+    // margin: 2em auto;
+    // max-width: $limit_width;
+
+    .f-carousel__nav {
+      display: none;
+    }
+
+    .quote-list {
+
+      &.f-carousel {
+        .quote-item:not(:first-child) {
+          display: none;
+        }
+
+        .f-carousel__viewport {
+          .quote-item:not(:first-child) {
+            display: block;
+          }
+        }
+
+        .f-carousel__track {
+          align-items: center;
+        }
+      }
+
+      .quote-item {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+      }
+
+      blockquote {
+        text-align: center;
+        color: var(--ehd-color--accent);
+        text-transform: uppercase;
+        line-height: 1;
+
+        p {
+          font-size: inherit;
+          line-height: 1;
+          // margin-bottom: 1rem;
+
+          position: relative;
+
+
+        }
+
+        &.show-quotes {
+          p {
+
+            &:first-of-type:before,
+            &:last-of-type:after {
+              content: "\2018";
+
+              color: inherit;
+            }
+
+            &:last-of-type:after {
+              content: "\2019";
+            }
+          }
+        }
+
+        cite {
+
+          font-size: 20px;
+          color: var(--ehd-color--accent);
+        }
+      }
+
+    }
+  }
+}

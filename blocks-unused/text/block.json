@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "acf/text",
+	"title": "Text",
+	"description": "A Text Block",
+	"style": "file:../../dist/css/text/text.css",
+	"editorStyle": "file:../../dist/css/text/editor.css",
+	"editorScript": [],
+	"category": "common",
+	"icon": "text",
+	"keywords": [
+		"",
+		"",
+		""
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "text.php"
+	},
+	"supports": {
+    "jsx": true,
+		"align": [
+			"wide",
+			"full"
+		],
+		"alignWide": true,
+		"alignContent": false,
+		"alignText": false,
+		"anchor": true,
+		"className": true,
+		"color": {
+			"background": true,
+			"gradients": false,
+			"link": false,
+			"text": true,
+			"enableContrastChecker": true
+		},
+		"customClassName": true,
+		"defaultStylePicker": true,
+		"html": false,
+		"multiple": true,
+		"reusable": true,
+
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": false,
+			"lineHeight": false
+		}
+	}
+}

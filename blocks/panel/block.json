@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ehd/panel",
+	"version": "0.1.0",
+	"title": "Panel",
+	"category": "common",
+	"icon": "format-aside",
+	"description": "Simple Panel",
+  "parent": ["ehd/boxes"],
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": false,
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": false
+    }
+	},
+  "attributes": {
+    "panelWidth": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+	"textdomain": "ehd",
+	"editorScript": "file:../../dist/js/panel-index.js",
+	"style": "file:../../dist/css/panel/style.css"
+}

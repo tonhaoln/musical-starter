@@ -1,0 +1,77 @@
+body {
+  --wp--style--global--content-size: #{$content-size};
+  --wp--style--global--wide-size: #{$wide-size};
+  --ehd--grid--gap: #{$wrapper-padding};
+
+  // Divide the content width into 2 columns (witha gap in the middle)
+  --ehd--grid--middle-half: calc((var(--wp--style--global--content-size) - var(--ehd--grid--gap)) / 2);
+
+  // The next columns, are the difference between the wide size and the content size, minus the gap
+  --ehd--grid--wide-columns: calc((var(--wp--style--global--wide-size) - var(--wp--style--global--content-size) - (2 * var(--ehd--grid--gap))) / 2);
+
+  // Lets create a grid the mobile size 
+  --ehd--grid:
+    [full-start] 0 [wide-start content-start] minmax(0, 1fr) minmax(0, 1fr) [content-end wide-end] 0 [full-end];
+
+  // This is the grid once the content size is reached
+  @media(min-width: $content-bp) {
+    --ehd--grid:
+      [full-start] 0 [wide-start] minmax(0, 1fr) [content-start] minmax(0, var(--ehd--grid--middle-half)) minmax(0, var(--ehd--grid--middle-half)) [content-end] minmax(0, 1fr) [wide-end] 0 [full-end];
+  }
+
+  // This is the grid once the wide size is reached
+  @media(min-width: $wide-bp) {
+    --ehd--grid:
+      [full-start] 1fr [wide-start] var(--ehd--grid--wide-columns) [content-start] var(--ehd--grid--middle-half) var(--ehd--grid--middle-half) [content-end] var(--ehd--grid--wide-columns) [wide-end] 1fr [full-end];
+  }
+}
+
+.ehd-grid {
+  display: grid;
+  grid-template-columns: var(--ehd--grid);
+  grid-column-gap: var(--ehd--grid--gap);
+  grid-template-rows: auto;
+
+  >* {
+    grid-column: content;
+    margin-bottom: var(--wp--preset--spacing--40);
+
+    &.alignwide {
+      grid-column: wide;
+    }
+
+    &.alignfull {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+
+.content-wrap {
+  >*:not(p, h1, h2, h3, h4, h5, h6, ul, ol) {
+    margin-bottom: var(--wp--preset--spacing--40);
+  }
+
+  >* {
+    max-width: var(--wp--style--global--content-size);
+    margin-inline: auto;
+    width: Min(100%, calc(100vw - 2 * var(--wp--preset--spacing--40)));
+  }
+
+  .is-layout-constrained>* {
+    width: Min(100%, calc(100vw - 2 * var(--wp--preset--spacing--40)));
+  }
+
+
+  .alignwide {
+    max-width: var(--wp--style--global--wide-size);
+    width: Min(100%, calc(100vw - 2 * var(--wp--preset--spacing--40)));
+  }
+
+  .alignfull {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

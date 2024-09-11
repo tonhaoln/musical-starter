@@ -1,0 +1,75 @@
+body {
+  --oots-tab-border-radius: 0.5rem;
+  --oots-tab-color: var(--wp--preset--color--dark-green);
+  --oots-tab-active-color: var(--colour-text);
+}
+
+.ehd-tabs {
+  ul[role="tablist"] {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    overflow-y: none;
+    transform: translateY(1px);
+    overflow-x: auto;
+    padding: 0;
+    margin: 0;
+
+    /* Styles the entire scrollbar */
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    /* Styles the track (part the thumb slides within) */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Styles the thumb (the draggable part) */
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--wp--preset--color--blue);
+
+      /* Rounded corners of the thumb */
+      border-color: transparent
+        /* Creates a border around the thumb */
+    }
+
+    /* Optional: style the thumb on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: var(--colour-text);
+    }
+  }
+
+  a[role="tab"] {
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--wp--preset--color--grey, #bbb);
+    color: var(--oots-tab-color);
+
+    background-color: var(--wp--preset--color--background);
+
+    border-top-left-radius: var(--oots-tab-border-radius);
+    border-top-right-radius: var(--oots-tab-border-radius);
+
+    &:hover,
+    &:focus {
+      color: var(--oots-tab-active-color);
+    }
+  }
+
+  a[aria-selected="true"] {
+    color: var(--oots-tab-active-color);
+    border-bottom-color: white;
+  }
+
+  article.block-tab {
+    padding: 1rem;
+    border: 1px solid var(--wp--preset--color--grey, #bbb);
+    border-bottom-left-radius: var(--oots-tab-border-radius);
+    border-bottom-right-radius: var(--oots-tab-border-radius);
+    border-top-right-radius: var(--oots-tab-border-radius);
+  }
+}

@@ -1,0 +1,47 @@
+<?php 
+add_action( 'acf/include_fields', function() {
+	if ( ! function_exists( 'acf_add_local_field_group' ) ) {
+		return;
+	}
+
+  $key = 'block_DX9S_QWY_';
+
+	acf_add_local_field_group( array(
+	'key' => $key.'group_64ef249aQWY',
+	'title' => 'XYZ',
+	'fields' => array(
+    
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'DX9S/QWY',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+	'show_in_rest' => 0,
+  ) );
+} );
+
+
+
+function ehd_enqueue_DX9S_UDS() {
+  wp_register_script( 
+    'ehd-QWY-js', 
+    get_template_directory_uri() . '/dist/js/QWY.js', 
+    array('jquery', 'acf'), 
+    '1.0', 
+    true 
+  );
+}
+add_action( 'enqueue_block_assets', 'ehd_enqueue_DX9S_UDS' );

@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ehd/social-icons",
+	"title": "Social Icons",
+	"description": "A social icon block",
+	"style": "file:../../dist/css/social-icons/social-icons.css",
+	"editorStyle": "file:../../dist/css/social-icons/editor.css",
+	"editorScript": [],
+	"script": "ehd-social-icons-js",
+	"category": "common",
+	"icon": "networking",
+	"keywords": [
+		"",
+		"",
+		""
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "social-icons.php"
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"alignWide": true,
+		"alignContent": false,
+		"alignText": false,
+		"anchor": true,
+		"className": true,
+		"color": {
+			"background": true,
+			"gradients": false,
+			"link": false,
+			"text": false,
+			"enableContrastChecker": false
+		},
+		"customClassName": false,
+		"defaultStylePicker": true,
+		"html": false,
+		"multiple": true,
+		"reusable": true,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": false,
+			"lineHeight": false
+		}
+	},
+	"attributes": {
+		"variable": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"example": {}
+}

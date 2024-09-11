@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ehd/image-gallery",
+	"title": "Image Gallery",
+	"description": "An Image Gallery with a lightbox popup",
+	"style": ["fancybox-css","file:../../dist/css/image-gallery/image-gallery.css"],
+	"editorStyle": "file:../../dist/css/image-gallery/editor.css",
+	"editorScript": [],
+	"script": "image-gallery-js",
+	"category": "common",
+	"icon": "format-gallery",
+	"keywords": [
+		"",
+		"",
+		""
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "image-gallery.php"
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"alignWide": true,
+		"alignContent": false,
+		"alignText": false,
+		"anchor": true,
+		"className": true,
+		"color": {
+			"background": true,
+			"gradients": false,
+			"link": false,
+			"text": false,
+			"enableContrastChecker": false
+		},
+		"customClassName": false,
+		"defaultStylePicker": true,
+		"html": false,
+		"multiple": true,
+		"reusable": true,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": false,
+			"lineHeight": false
+		}
+	},
+	"attributes": {
+		"variable": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"example": {}
+}

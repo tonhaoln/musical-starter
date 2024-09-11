@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ehd/boxes",
+	"version": "0.1.0",
+	"title": "Boxes",
+	"category": "common",
+	"icon": "grid-view",
+	"description": "A grid of heading / content boxes",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+	},
+	"textdomain": "ehd",
+	"editorScript": "file:../../dist/js/boxes.js",
+	"style": "file:../../dist/css/boxes/style.css",
+  "editorStyle": "file:../../dist/css/boxes/editor.css"
+}

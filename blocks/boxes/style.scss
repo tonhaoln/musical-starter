@@ -1,0 +1,24 @@
+@import "../../src/scss/variables";
+
+.wp-block-ehd-boxes {
+  --boxes-padding: var(--global-padding);
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--boxes-padding);
+
+  >div {
+    flex: 1 1 100%;
+
+    @media (min-width: $content-bp) {
+      &.panel-width-half {
+        max-width: calc(50% - (var(--boxes-padding) / 2));
+      }
+
+      &.panel-width-third {
+        max-width: calc(33.333% - (var(--boxes-padding) / 1.5));
+      }
+    }
+  }
+}

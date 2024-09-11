@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ehd/two-col",
+	"version": "0.1.0",
+	"title": "Two Columns",
+	"category": "common",
+	"icon": "columns",
+	"description": "Two Columns",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+	},
+	"textdomain": "ehd",
+	"editorScript": "file:../../dist/js/two-col-index.js",
+	"style": "file:../../dist/css/two-col/style.css"
+}

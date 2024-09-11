@@ -1,0 +1,67 @@
+.wp-block-ehd-button {
+  container-type: inline-size;
+}
+
+.button-wrap {
+  display: flex;
+  gap: clamp(1rem, 3vw, 1.5rem);
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+  &.flex-left-mob {
+    align-items: flex-start;
+  }
+
+  &.flex-center-mob {
+    align-items: center;
+  }
+
+  a.button {
+    margin: 0 !important;
+  }
+}
+
+@container (min-width: 600px) {
+  .button-wrap {
+
+    &.flex-center,
+    &.flex-space-between,
+    &.flex-space-evenly {
+      align-items: center;
+    }
+
+    &.flex-left {
+      align-items: flex-start;
+    }
+
+    &.flex-right {
+      align-items: flex-end;
+    }
+
+    &.flex-row {
+      flex-direction: row;
+      align-items: center;
+
+      &.flex-left {
+        justify-content: flex-start;
+      }
+
+      &.flex-center {
+        justify-content: center;
+      }
+
+      &.flex-right {
+        justify-content: flex-end;
+      }
+
+      &.flex-space-between {
+        justify-content: space-between;
+      }
+
+      &.flex-space-evenly {
+        justify-content: space-evenly;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ehd/page-header",
+	"title": "Page Header",
+	"description": "A block that takes a title, description and image for use as a page header",
+	"style": "file:../../dist/css/page-header/page-header.css",
+	"editorStyle": "file:../../dist/css/page-header/editor.css",
+	"editorScript": [],
+	"script": "ehd-page-header-js",
+	"category": "common",
+	"icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1em\" height=\"1em\" viewBox=\"0 0 2048 2048\"><path fill=\"currentColor\" d=\"M128 0h1792v2048H128zm1664 1920V128H256v1792zM1664 256v512H384V256zm-128 384V384H512v256z\"/></svg>",
+	"keywords": [
+		"",
+		"",
+		""
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "page-header.php"
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"alignWide": true,
+		"alignContent": false,
+		"alignText": false,
+		"anchor": true,
+		"className": true,
+		"color": {
+			"background": true,
+			"gradients": false,
+			"link": false,
+			"text": false,
+			"enableContrastChecker": false
+		},
+		"customClassName": true,
+		"defaultStylePicker": true,
+		"html": false,
+		"multiple": true,
+		"reusable": true,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": false,
+			"lineHeight": false
+		}
+	},
+	"attributes": {
+		"variable": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"example": {}
+}

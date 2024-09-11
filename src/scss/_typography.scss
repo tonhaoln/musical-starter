@@ -1,0 +1,27 @@
+.has-text-align-center {
+  text-align: center;
+}
+
+.has-text-align-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.site-wrap :where(p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, cite):not(:last-child) {
+  margin-bottom: var(--wp--preset--spacing--20);
+}
+
+.wp-block-heading:not(:first-child) {
+  margin-top: clamp(1.5rem, 6vw, 3rem);
+}

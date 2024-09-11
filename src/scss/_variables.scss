@@ -1,0 +1,19 @@
+@use "sass:map";
+@import "vars"; // Breakpoints
+$small: $content-size;
+$medium: $wide-size;
+$large: calc($wide-size + 300px);
+
+$nav-toggle: 800px;
+
+$wrapper-padding: clamp(1rem, 5vw, 2rem);
+
+// These are used for the main content grid breakpoints
+$content-bp: calc($content-size + (2 * $wrapper-padding));
+$wide-bp: calc($wide-size + (2 * $wrapper-padding));
+
+:root {
+  --global-padding: clamp(1rem, 5vw, 2rem);
+  --gloabal-border-radius: 3px;
+  --color-accent: var(--color-bright-blue);
+}

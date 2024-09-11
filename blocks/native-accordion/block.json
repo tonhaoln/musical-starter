@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "Accordion",
+  "name": "ehd/native-accordion",
+  "version": "1",
+  "category": "common",
+  "icon": "table-row-after",
+  "description": "A simple accordion block that allows you to add multiple tabs with content inside them.",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": true,
+    "spacing": {
+			"margin": true,
+			"padding": true
+		}
+  },
+  "attributes": {
+    "className": {
+      "type": "string",
+      "default": ""
+    },
+    "tabLabelsArray": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "textdomain": "oots-plugin",
+  "script": "file:../../dist/js/native-accordion.js",
+  "editorScript": "file:../../dist/js/native-accordion-index.js",
+  "editorStyle": "file:../../dist/css/native-accordion/editor.css",
+  "style": "file:../../dist/css/native-accordion/style.css",
+  "render": "file:./index.php"
+}

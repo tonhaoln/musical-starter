@@ -1,0 +1,68 @@
+.wp-block-ehd-social-icons {
+
+  .social-wrapper {
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h3 {
+      text-transform: uppercase;
+    }
+
+    .social-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-block: 1rem;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .hashtag-link {
+        a {
+          font-family: var(--wp--preset--font-family--gotham-book);
+          text-decoration: none;
+          font-size: var(--wp--preset--font-size--medium);
+          line-height: 1;
+
+          &:hover {
+            text-decoration: underline;
+            color: #000;
+          }
+        }
+      }
+    }
+
+    ul.social-links {
+      list-style: none;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      li a {
+        padding: 0 0.75rem;
+
+        svg {
+          width: auto;
+          height: var(--wp--preset--font-size--medium);
+
+          path {
+            transition: fill ease-in-out 0.3s;
+            fill: var(--wp--preset--color--accent);
+          }
+        }
+
+        &:hover svg path {
+          fill: #000;
+        }
+      }
+
+    }
+  }
+}

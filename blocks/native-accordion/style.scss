@@ -1,0 +1,84 @@
+// Accordion Container
+.wp-block-ehd-native-accordion {
+  --accordion-border-color: #777;
+  --accordion-header-bg-color: #f7f7f7;
+  --accordion-item-bg-color: #f7f7f7;
+
+  --accordion-header-bg-color--active: blue;
+  --accordion-header-text-color--active: white;
+
+  .accordion-inner {
+    section {
+      border: 1px solid var(--accordion-border-color);
+      border-radius: 4px;
+      margin-bottom: 10px;
+      overflow: hidden;
+
+      h2 {
+        margin: 0;
+
+        button {
+          width: 100%;
+          text-align: left;
+          padding: 15px;
+          font-size: 16px;
+          font-weight: bold;
+          background-color: var(--accordion-header-bg-color);
+          border: none;
+          outline: none;
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          &:hover,
+          &:focus {
+            background-color: var(--accordion-header-bg-color--active);
+            color: var(--accordion-header-text-color--active);
+          }
+
+          svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s;
+            transform: rotate(0deg);
+          }
+
+          &[aria-expanded="true"] {
+            svg {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      div.accoridion-item-content {
+        border-top: 1px solid var(--accordion-border-color);
+        display: grid;
+        grid-template-rows: 0fr;
+        background-color: var(--accordion-item-bg-color);
+
+        transition: grid-template-rows 0.3s;
+        overflow: hidden;
+
+
+        .accoridion-item-content-inner {
+          min-height: 0;
+          transition: visibility 0.3s, padding 0.3s;
+          visibility: hidden;
+          padding: 0 1rem; // Padding on the sides
+
+        }
+
+        &[aria-hidden="false"] {
+          grid-template-rows: 1fr;
+
+          .accoridion-item-content-inner {
+            visibility: visible;
+            padding: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

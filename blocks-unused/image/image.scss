@@ -1,0 +1,10 @@
+.wp-block-acf-image {
+  &.alignfull {
+    .container {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

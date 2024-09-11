@@ -1,0 +1,81 @@
+@use "sass:map";
+
+body {
+  --theme-color-bg: #{$bgcolor};
+  --theme-color-fg: #{$fgcolor};
+  --theme-color-accent: #{$accent};
+  --theme-color-accent--contrast: #{$accentcolorcontrast};
+
+  --page-wrap-size: var(--wp--style--global--wide-size);
+  --theme-wrapper-padding: clamp(1rem, 5vw, 2rem);
+
+  background: var(--theme-color-bg);
+  color: var(--theme-color-fg);
+
+  p,
+  li,
+  ul,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  blockquote,
+  q,
+  details,
+  summary,
+  label,
+  code,
+  pre,
+  th,
+  td {
+    color: inherit;
+  }
+
+  a:where(:not(.button)) {
+    color: var(--theme-color-accent);
+    text-decoration: var(--wp--custom--theme--default--link-decoration);
+
+    &:hover,
+    &:active {
+      color: var(--theme-color-accent--contrast);
+      text-decoration: var(--wp--custom--theme--default--link-decoration-hover);
+    }
+
+  }
+
+  font-family: var(--wp--preset--font-family--default);
+}
+
+.has-background {
+  background: var(--theme-color-bg);
+  color: var(--theme-color-fg);
+
+  @each $color-name, $myColours in $color-map {
+    &.has-#{$color-name}-background-color {
+      --theme-color-bg: #{map.get($myColours, bgcolor)};
+      --theme-color-fg: #{map.get($myColours, fgcolor)};
+
+      @if map.has-key($myColours, accentcolor) {
+        --theme-color-accent: #{map.get($myColours, accentcolor)};
+      }
+
+      @if map.has-key($myColours, accentcolorcontrast) {
+        --theme-color-accent--contrast: #{map.get($myColours, accentcolorcontrast)};
+      }
+    }
+  }
+}
+
+
+.site-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .admin-bar & {
+    min-height: calc(100vh - 32px);
+  }
+}

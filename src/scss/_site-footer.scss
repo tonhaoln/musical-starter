@@ -1,0 +1,56 @@
+.site-footer {
+  margin: 0 auto;
+  width: Min(var(--wp--style--global--wide-size), calc(100% - 3rem));
+  padding: 4em 0 3em;
+
+  p {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .sponsors-producers-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  .sponsors-row,
+  .producers-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    gap: 1.5rem;
+
+    img {
+      max-width: 200px;
+    }
+  }
+
+  @media (min-width:$medium) {
+    .container {
+      display: flex;
+      justify-content: space-between;
+
+      .left p {
+        text-align: left;
+      }
+
+      .right p {
+        text-align: right;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.bottom-footer {
+  margin-top: 4rem;
+}

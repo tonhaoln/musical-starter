@@ -1,0 +1,51 @@
+{ 
+  "layout": {
+    "contentSize": "800px",
+    "wideSize": "1000px"
+  },
+  "colors": [
+        {
+            "slug": "dark-blue",
+            "name": "Dark Blue",
+            "color": "#25274D",
+            "foreground": "#fff",
+            "accent": "#2e9cca",
+            "inWP": true
+        },
+        {
+            "slug": "grey",
+            "name": "Grey",
+            "color": "#aaabb8",
+            "foreground": "#25274D",
+            "inWP": true
+        },
+        {
+            "slug": "navy-blue",
+            "name": "Navy Blue",
+            "color": "#464866",
+            "foreground": "#fff",
+            "inWP": true
+        },
+        {
+            "slug": "bright-blue",
+            "name": "Bright Blue",
+            "color": "#2e9cca",
+            "foreground": "#fff",
+            "inWP": true
+        },
+        {
+            "slug": "white",
+            "name": "White",
+            "color": "#fff",
+            "foreground": "#25274D",
+            "accent": "#123465",
+            "inWP": true,
+            "defaultBG": true
+        },
+        {
+            "slug": "red",
+            "name": "Red",
+            "color": "#f00"
+        }
+    ]
+}

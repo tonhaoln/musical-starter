@@ -1,0 +1,32 @@
+@import "../../src/scss/variables";
+
+.logos-grid {
+  --logo-border-color: var(--color-grey, #ccc);
+
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
+
+  .logo-item {
+    position: relative;
+    padding-bottom: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &.include-border {
+      border: 1px solid var(--logo-border-color);
+    }
+
+    img {
+      position: absolute;
+      max-width: 75%;
+      max-height: 75%;
+      object-fit: contain;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

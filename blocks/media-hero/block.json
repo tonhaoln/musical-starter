@@ -1,0 +1,57 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ehd/media-hero",
+	"title": "Media Hero",
+	"description": "An Image or Video with a block of text on top",
+	"style": "file:../../dist/css/media-hero/media-hero.css",
+	"editorStyle": "file:../../dist/css/media-hero/editor.css",
+	"editorScript": [],
+	"script": "ehd-media-hero-js",
+	"category": "common",
+	"icon": "star-filled",
+	"keywords": [
+		"",
+		"",
+		""
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "media-hero.php"
+	},
+	"supports": {
+    "align": ["full"],
+		"alignWide": false,
+		"alignContent": true,
+		"alignText": false,
+		"anchor": true,
+		"className": true,
+		"color": {
+			"background": true,
+			"gradients": false,
+			"link": false,
+			"text": true,
+			"enableContrastChecker": true
+		},
+		"customClassName": true,
+		"defaultStylePicker": true,
+		"html": false,
+		"multiple": true,
+		"reusable": true,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": false,
+			"lineHeight": false
+		}
+	},
+	"attributes": {
+		"variable": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"example": {}
+}

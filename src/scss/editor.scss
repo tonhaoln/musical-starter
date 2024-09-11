@@ -1,0 +1,39 @@
+@import "reset",
+"variables",
+"layout-block-grid",
+"base-styles",
+"editor-styles",
+"typography",
+"core-blocks/index";
+
+.ehd-hide-block {
+  position: relative;
+  outline: 12px solid red !important;
+  background-color: rgba(red, 0.2) !important;
+
+  &:after {
+    content: 'Hidden on the front end!';
+    position: absolute;
+    top: -11px;
+    left: 0px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 10px;
+    background-color: red;
+  }
+}
+
+body.mce-content-body {
+  background-color: white !important;
+  color: #000 !important;
+  padding: 1rem 0.5rem !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+
+  p {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+.editor-styles-wrapper.block-editor-writing-flow {
+  padding-bottom: 100px !important;
+}
